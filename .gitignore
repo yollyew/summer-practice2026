@@ -34,3 +34,4 @@ bin/
 users.txt
 /src/test
 /src/main/resources
+/target
