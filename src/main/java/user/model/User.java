@@ -1,6 +1,4 @@
-package User.Model;
-
-import java.util.UUID;
+package user.model;
 
 public class User {
     private int id;

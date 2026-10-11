@@ -1,7 +1,7 @@
-package User.Repository;
+package user.repository;
 
-import Repository.RowMapper;
-import User.Model.User;
+import repository.RowMapper;
+import user.model.User;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -23,7 +23,7 @@ public class UserDBRepository implements UserRepository {
     @Override
     public void save(User user) {
         try (Connection connection = dataSource.getConnection();
-            PreparedStatement statement = connection.prepareStatement("insert into account(name, email, password, description) values(?, ?, ?, ?)")) {
+             PreparedStatement statement = connection.prepareStatement("insert into account(name, email, password, description) values(?, ?, ?, ?)")) {
             statement.setString(1, user.getName());
             statement.setString(2, user.getEmail());
             statement.setString(3, user.getPassword());
@@ -38,7 +38,7 @@ public class UserDBRepository implements UserRepository {
     @Override
     public Optional<User> findByEmail(String email) {
         try (Connection connection = dataSource.getConnection();
-            PreparedStatement statement = connection.prepareStatement("select * from account where email = ?")) {
+             PreparedStatement statement = connection.prepareStatement("select * from account where email = ?")) {
 
             statement.setString(1, email);
 
@@ -80,7 +80,7 @@ public class UserDBRepository implements UserRepository {
     @Override
     public boolean changeDescription(String email, String description) {
         try (Connection connection = dataSource.getConnection();
-            PreparedStatement statement = connection.prepareStatement("update account set description = ? where email = ?")) {
+             PreparedStatement statement = connection.prepareStatement("update account set description = ? where email = ?")) {
 
             statement.setString(1, description);
             statement.setString(2, email);
@@ -96,8 +96,8 @@ public class UserDBRepository implements UserRepository {
     @Override
     public List<User> findAll() {
         try (Connection connection = dataSource.getConnection();
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select * from account")) {
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery("select * from account")) {
 
             List<User> users = new ArrayList<>();
 
@@ -115,7 +115,7 @@ public class UserDBRepository implements UserRepository {
     @Override
     public List<User> findByDescription(String description) {
         try (Connection connection = dataSource.getConnection();
-            PreparedStatement statement = connection.prepareStatement("select * from account where description = ?")) {
+             PreparedStatement statement = connection.prepareStatement("select * from account where description = ?")) {
 
             statement.setString(1, description);
 

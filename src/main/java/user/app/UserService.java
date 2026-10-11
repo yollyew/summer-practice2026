@@ -1,9 +1,9 @@
-package User.App;
+package user.app;
 
-import User.API.dto.UserDto;
-import User.Model.User;
-import User.Repository.UserDBRepository;
-import User.Repository.UserRepository;
+import user.api.dto.UserDto;
+import user.model.User;
+import user.repository.UserDBRepository;
+import user.repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;

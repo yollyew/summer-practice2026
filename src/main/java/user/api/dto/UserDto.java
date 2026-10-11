@@ -1,4 +1,4 @@
-package User.API.dto;
+package user.api.dto;
 
 public class UserDto {
     private String name;

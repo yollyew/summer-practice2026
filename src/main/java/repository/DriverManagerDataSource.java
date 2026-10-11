@@ -1,4 +1,4 @@
-package Repository;
+package repository;
 
 import javax.sql.DataSource;
 import java.io.PrintWriter;

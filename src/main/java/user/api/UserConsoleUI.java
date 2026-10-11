@@ -1,8 +1,8 @@
-package User.API;
+package user.api;
 
-import User.API.dto.UserDto;
-import User.App.UserService;
-import User.Model.User;
+import user.api.dto.UserDto;
+import user.app.UserService;
+import user.model.User;
 
 import java.util.Scanner;
 
