@@ -32,3 +32,5 @@ bin/
 
 ### Project Trash ###
 users.txt
+/src/test
+/src/main/resources
